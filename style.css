@@ -1,0 +1,481 @@
+/* Typography
+__________________________________________ */
+
+@font-face {
+    font-family: 'ds_wallauregular';
+    src: url('img/dswallau-webfont.woff2') format('woff2'),
+         url('img/dswallau-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+body {
+  font-size: clamp(1rem, 1rem + 0.25vw, 3rem);
+}
+
+.nav {
+  font-family: 'ds_wallauregular', sans-serif;
+  font-size: larger;
+  line-height: 1.1;
+}
+
+.menu {
+  font-family: 'Germania One', sans-serif;
+}
+
+.menu p,
+.menu li {
+  font-style: italic;
+  font-family: 'Cairo', sans-serif;
+}
+
+.menu li {
+  font-style: italic;
+}
+
+.menu-section-info {
+  line-height: 1.2;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.about-wrapper,
+.contact-wrapper {
+  font-family: 'Cairo', sans-serif;
+}
+
+.about-wrapper {
+  line-height: 1.6;
+}
+
+
+
+/* Helper Classes
+__________________________________________ */
+
+.extra-mb {
+  margin-bottom: 1.5rem;
+}
+
+.margin-0 {
+  margin: 0;
+}
+
+.mt-0 {
+  margin-top: 0rem;
+}
+
+.mb-0 {
+  margin-bottom: 0rem;
+}
+
+.push-right {
+  padding-left: 2rem;
+}
+
+.bold {
+  font-weight: 700;
+}
+
+
+
+/* Header Nav
+__________________________________________ */
+
+header {
+  background-color: #222;
+  padding: 1rem;
+  position: sticky;
+  top: 0;
+  width: 100%;
+  z-index: 99;
+}
+
+.nav {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  gap: 1rem;
+}
+
+.nav-left,
+.nav-right {
+  display: flex;
+  justify-content: space-evenly;
+  flex-basis: 33%;
+  gap: 1rem;
+}
+
+header * {
+  margin: 0;
+  list-style: none;
+}
+
+.nav-link {
+  color: #bd2115;
+  text-decoration: none;
+}
+
+.nav-link:hover {
+  color: #f1cd37;
+}
+
+.nav-home {
+  color: white;
+}
+
+
+
+/* Nav for mobile
+__________________________________________ */
+
+.mobile-nav-wrapper {
+  position: fixed;
+  left: -100%;
+  width: 100%;
+  margin-top: 1rem;
+  background-color: #222;
+  padding: 1rem;
+  z-index: 99;
+  opacity: 0.95;
+  transition: all ease-in-out 0.2s;
+}
+
+.display-block {
+  transform: translateX(100%);
+}
+
+.mobile-nav-list {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2rem;
+  padding: 0;
+}
+
+.mobile-nav-list a {
+  text-decoration: none;
+  color: #fff;
+  font-size: 1.5rem;
+  font-weight: 600;
+}
+
+.hamburger-lines {
+  flex-direction: column;
+  gap: 0.4rem;
+}
+
+.hamburger-lines,
+#nav-button {
+  display: none;
+  position: absolute;
+  right: 2rem;
+  width: 2rem;
+  height: 2rem;
+}
+
+.line {
+  display: block;
+  background: white;
+  width: 2rem;
+  height: 4px;
+  border-radius: 10px;
+}
+
+@media screen and (max-width: 600px) {
+  .nav {
+    justify-content: start;
+  }
+
+  .nav-center {
+    width: 70%;
+  }
+
+  .nav-left,
+  .nav-right {
+    display: none;
+  }
+
+  .hamburger-lines {
+    display: flex;
+  }
+
+  #nav-button {
+    display: block;
+    opacity: 0;
+    z-index: 2
+  }
+}
+
+
+
+/* Home Page
+__________________________________________ */
+
+.main-bg {
+  width: 100%;
+  height: 95vh;
+  background: url('img/bg2.png') no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+@media (max-width: 800px) {
+  .main-bg {
+    background: url('img/sauerbraten.jpg') no-repeat;
+    background-size: cover;
+    background-position: center;
+  }
+}
+
+.logo-container {
+  padding: 1rem;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: start;
+}
+
+.logo {
+  max-width: max(8vw, 100px);
+  object-fit: scale-down;
+}
+
+.secondary-img-wrapper {
+  height: 100vh;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(22rem, 2fr));
+}
+
+.mobile-only {
+  display: none;
+}
+
+.sec-img {
+  width: 100%;
+  object-fit: cover;
+  height: 100%;
+}
+
+
+/* home page - bottom half */
+
+.contact-bg {
+  width: 100%;
+  height: 100vh;
+  background: url('img/bg2.png') #bbb no-repeat fixed;
+  background-blend-mode: multiply;
+  background-size: cover;
+  background-position: center;
+}
+
+.home-pg-bottom {
+  background-color: #222;
+  padding: 4rem 0;
+}
+
+.contact-wrapper {
+  width: min(64rem, 95%);
+  margin: 4rem auto;
+  padding: 2rem;
+  background-color: #eee;
+  color: black;
+  border-radius: 12px;
+}
+
+.hours {
+  margin-bottom: 3rem;
+}
+
+.hours-listing {
+  margin: 0;
+  margin-bottom: 0.25rem;
+}
+
+#map {
+  display: block;
+  margin: 2rem auto;
+  box-shadow: 0px 4px 12px 6px black;
+  width: 90%;
+  aspect-ratio: 3/2;
+}
+
+@media (max-width: 600px) {
+  #map {
+    width: 100%;
+    aspect-ratio: 1/1;
+  }
+}
+
+.facebook-wrapper {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 2rem;
+}
+
+#facebook {
+  aspect-ratio: 2/3;
+  box-shadow: 0px 4px 12px 6px black;
+}
+
+
+
+/* Menu Page
+__________________________________________ */
+
+.menu-body {
+  height: 100vh;
+  width: 100%;
+  background: url('img/sauerbraten.jpg') #777 no-repeat fixed;
+  background-blend-mode: multiply;
+  background-position: center center;
+  background-size: cover;
+}
+
+.menu {
+  color: #000;
+  width: min(64rem, 100%);
+  padding: 3rem;
+  margin: 0 auto;
+  opacity: 0.87;
+  border-radius: 12px;
+}
+
+.menu-section {
+  padding: 2rem;
+  background-color: tan;
+}
+
+@media (max-width: 600px) {
+  .menu, .menu-section {
+    padding: 1rem;
+  }
+}
+
+.menu-header,
+.menu-section {
+  border-radius: 8px;
+  margin-bottom: 2rem;
+  -webkit-box-shadow: 0px 0px 6px 0px #000;
+  box-shadow: 0px 0px 16px 0px black;
+}
+
+.menu-header {
+  width: 60%;
+  margin: 2rem auto;
+  padding: 0.5rem;
+  background-color: #eee;
+  color: black;
+}
+
+.menu-header > h5 {
+  margin: 0;
+}
+
+.item-title * {
+  margin: 0rem;
+}
+
+.item-title {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 0.5rem;
+}
+
+.menu h2 {
+  margin-bottom: 0.75rem;
+}
+
+.menu p {
+  width: 95%;
+  margin: 0rem auto 1.5rem;
+}
+
+.menu li {
+  list-style: none;
+}
+
+#wings-desc {
+  margin-bottom: -0.5rem;
+}
+
+.menu .less-mb {
+  margin-bottom: 0rem;
+}
+
+
+
+/* About Page
+__________________________________________ */
+
+.about-bg {
+  width: 100%;
+  height: 100vh;
+  background: url('img/exterior.jpeg') no-repeat fixed;
+  background-blend-mode: multiply;
+  background-size: cover;
+  background-position: center;
+}
+
+.about-wrapper {
+  width: min(64rem, 92%);
+  margin: 4rem auto;
+  padding: 2rem;
+  background-color: #eee;
+  color: black;
+  box-shadow: 0px 0px 18px 0px #000;
+  opacity: .95;
+  border-radius: 12px;
+}
+
+.about-wrapper > img {
+  width: 100%;
+  margin: 3rem 0 3rem;
+  box-shadow: 0px 0px 25px 5px black;
+  transition: all .6s ease-in-out;
+  border-radius: 8px;
+}
+
+.about-wrapper > img:hover {
+  transform: scale(115%);
+
+}
+
+
+
+/* Lunch Menu
+__________________________________________ */
+
+.lunch-menu-body {
+  height: 100vh;
+  width: 100%;
+  background: url('img/reuben.webp') #777 no-repeat fixed;
+  background-blend-mode: multiply;
+  background-position: center center;
+  background-size: cover;
+}
+
+
+
+/* Beer List
+__________________________________________ */
+
+.beer-body {
+  height: 100vh;
+  width: 100%;
+  background: url('img/beer-bg.jpg') #555 no-repeat fixed;
+  background-blend-mode: multiply;
+  background-position: center center;
+  background-size: cover;
+}
+
+.beer-list-pic {
+  padding: 4rem 0rem;
+  display: flex;
+  justify-content: center;
+}
