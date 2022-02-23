@@ -20,9 +20,3 @@ window.addEventListener('mouseup', function(e) {
     mobileNav.classList.remove('display-block');
   }
 })
-
-
-
-
-
-

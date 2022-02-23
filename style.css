@@ -87,7 +87,6 @@ __________________________________________ */
 header {
   background-color: #222;
   padding: 1rem;
-  position: sticky;
   top: 0;
   width: 100%;
   z-index: 99;
@@ -125,6 +124,10 @@ header * {
 
 .nav-home {
   color: white;
+}
+
+.fixed {
+  position: fixed;
 }
 
 
@@ -345,7 +348,8 @@ __________________________________________ */
   border-radius: 12px;
 }
 
-.menu-section {
+.menu-section,
+#lunch-footer {
   padding: 2rem;
   background-color: tan;
 }
@@ -357,7 +361,8 @@ __________________________________________ */
 }
 
 .menu-header,
-.menu-section {
+.menu-section,
+#lunch-footer {
   border-radius: 8px;
   margin-bottom: 2rem;
   -webkit-box-shadow: 0px 0px 6px 0px #000;
@@ -366,7 +371,7 @@ __________________________________________ */
 
 .menu-header {
   width: 60%;
-  margin: 2rem auto;
+  margin: 7rem auto 2rem;
   padding: 0.5rem;
   background-color: #eee;
   color: black;
@@ -443,7 +448,6 @@ __________________________________________ */
 
 .about-wrapper > img:hover {
   transform: scale(115%);
-
 }
 
 
